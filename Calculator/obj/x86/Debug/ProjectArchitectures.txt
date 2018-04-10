@@ -1,0 +1,1 @@
+C:\Users\jamieosullivan\source\repos\Calculator\Calculator\Calculator.csproj;x86

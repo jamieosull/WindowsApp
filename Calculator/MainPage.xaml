@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Simple Calculator" VerticalAlignment="Top"/>
+        <TextBox
+            IsReadOnly="True"
+            x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <Button Click="btn7_Click" x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn8_Click" x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn9_Click" x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnDiv_Click" x:Name="btnDiv" Content="/" HorizontalAlignment="Left" Margin="219,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn4_Click" x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn5_Click" x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="125,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn6_Click" x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="172,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnTimes_Click" x:Name="btnTimes" Content="x" HorizontalAlignment="Left" Margin="219,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn1_Click" x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="78,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn2_Click" x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="125,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn3_Click" x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="172,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnMinus_Click" x:Name="btnMinus" Content="-" HorizontalAlignment="Left" Margin="219,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnEquals_Click" x:Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="78,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btn0_Click" x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="125,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnClear_Click" x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button Click="btnPlus_Click" x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

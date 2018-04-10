@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Calculator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Simple Calculator" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='1'
+            IsReadOnly="True"
+            x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <Button x:ConnectionId='2'                    x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='3'                    x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='4'                    x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='5'                      x:Name="btnDiv" Content="/" HorizontalAlignment="Left" Margin="219,115,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='6'                    x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='7'                    x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="125,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='8'                    x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="172,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='9'                        x:Name="btnTimes" Content="x" HorizontalAlignment="Left" Margin="219,152,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='10'                    x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="78,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='11'                    x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="125,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='12'                    x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="172,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='13'                        x:Name="btnMinus" Content="-" HorizontalAlignment="Left" Margin="219,189,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='14'                         x:Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="78,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='15'                    x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="125,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='16'                        x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:ConnectionId='17'                       x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>
+
