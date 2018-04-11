@@ -55,9 +55,9 @@
         
             <Button  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top" Click="Button_Click_Conv"/>
 
-        
-        
-        </Grid>
+
+
+    </Grid>
 
 
 

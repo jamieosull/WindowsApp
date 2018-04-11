@@ -367,7 +367,7 @@ namespace Calculator
             switch (args.Status)
             {
                 case PositionStatus.Ready:
-                    tblStatus.Text = "REady";
+                    tblStatus.Text = "Ready";
                     break;
                 case PositionStatus.Initializing:
                     tblStatus.Text = "Initialising";
@@ -383,7 +383,6 @@ namespace Calculator
                     break;
             }
         }
-
 
     }
 }

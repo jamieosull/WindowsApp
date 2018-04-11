@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-11T16:21:32.380</Modified>
+      <Modified>2018-04-11T16:56:28.997</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2018-04-11T16:21:31.502</Modified>
+      <Modified>2018-04-11T16:56:26.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-11T16:21:32.014</Modified>
+      <Modified>2018-04-11T16:56:28.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2018-04-11T16:21:32.376</Modified>
+      <Modified>2018-04-11T16:56:28.986</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
