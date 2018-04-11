@@ -29,9 +29,8 @@
         <Button Click="btnClear_Click" x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42"/>
         <Button Click="btnPlus_Click" x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
 
-<<<<<<< HEAD
 
-       
+        
             <TextBox x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="TextBox" VerticalAlignment="Top"/>
             <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
             <TextBox x:Name="TextBox_Amount" HorizontalAlignment="Left" Margin="465,203,0,0" Text="TextBox" VerticalAlignment="Top"/>
@@ -41,15 +40,6 @@
             <Button  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
         </Grid>
-=======
-        <TextBox HorizontalAlignment="Left" Margin="465,158,0,0" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="465,203,0,0" Text="TextBox" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TextBox_Amount" HorizontalAlignment="Left" Text="Amount in £" Margin="340,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged" RenderTransformOrigin="0.521,0.75"/>
-        <TextBlock x:Name="TextBox_Ans" HorizontalAlignment="Left" Text="Amount in $" Margin="340,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" SelectionChanged="TextBlock_SelectionChanged"/>
-        <TextBox HorizontalAlignment="Left" Margin="465,250,0,0" Text="TextBox" VerticalAlignment="Top"/>
-        <Button  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top" Click="Button_Click"/>
->>>>>>> 6ddce8c0ba276bc38ea813cb2ab00390825acde1
 
 
 

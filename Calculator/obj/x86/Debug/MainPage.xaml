@@ -30,7 +30,7 @@
         <Button x:ConnectionId='17'                       x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
 
 
-       
+        
             <TextBox x:ConnectionId='18' x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="TextBox" VerticalAlignment="Top"/>
             <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
             <TextBox x:ConnectionId='19' x:Name="TextBox_Amount" HorizontalAlignment="Left" Margin="465,203,0,0" Text="TextBox" VerticalAlignment="Top"/>

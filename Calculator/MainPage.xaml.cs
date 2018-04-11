@@ -279,7 +279,7 @@ namespace Calculator
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_Conv(object sender, RoutedEventArgs e)
         {
             double ans = Convert.ToDouble(TextBox_Amount.Text) * Convert.ToDouble(TextBox_ExchangeRate.Text);
             TextBox_Ans.Text = ans.ToString();
