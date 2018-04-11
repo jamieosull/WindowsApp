@@ -267,6 +267,12 @@ namespace Calculator
             AddOperationToResult(Operation.PLUS);
 
         }
+        
+         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            double answer = Convert.ToDouble(TextBox_Amount.Text) * Convert.ToDouble(TextBox_ExchangeRate.Text);
+            TextBox_Ans.Text = answer.ToString();
+        }
 
 
 
