@@ -7,8 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Simple Calculator" VerticalAlignment="Top"/>
+    <Grid Background="Green">
+        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top"/>
         <TextBox x:ConnectionId='1'
             IsReadOnly="True"
             x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
@@ -30,6 +30,16 @@
         <Button x:ConnectionId='17'                       x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
 
 
+       
+            <TextBox x:ConnectionId='18' x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="TextBox" VerticalAlignment="Top"/>
+            <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBox x:ConnectionId='19' x:Name="TextBox_Amount" HorizontalAlignment="Left" Margin="465,203,0,0" Text="TextBox" VerticalAlignment="Top"/>
+            <TextBlock  HorizontalAlignment="Left" Text="Amount in £" Margin="340,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  RenderTransformOrigin="0.521,0.75"/>
+            <TextBlock x:ConnectionId='20' x:Name="TextBox_Ans" HorizontalAlignment="Left" Text="Amount in $" Margin="340,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+            <TextBox HorizontalAlignment="Left" Margin="465,250,0,0" Text="TextBox" VerticalAlignment="Top"/>
+            <Button x:ConnectionId='21'  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top"                     />
+
+        </Grid>
 
 
 
@@ -41,6 +51,7 @@
 
 
 
-    </Grid>
+
+  
 </Page>
 
