@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>7BE8D84EB58CEE5871C5252E84EF072B9FB0B87FA7FE093B49E5DDCAC19A1379</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7CE635AF70B2780DBDD6C9CC794D2D5B024FB59E9A599F34225008825E7F961B</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>985d5ec1-dc93-4790-9201-11a7783cc044_1.0.0.0_x86__mnaqnj5zk3812</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>985d5ec1-dc93-4790-9201-11a7783cc044_mnaqnj5zk3812!App</RegisteredUserModeAppID>
     <RegisteredPackageID>985d5ec1-dc93-4790-9201-11a7783cc044</RegisteredPackageID>
@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-11T14:59:15.245</Modified>
+      <Modified>2018-04-11T16:21:32.380</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.exe">
       <PackagePath>entrypoint\Calculator.exe</PackagePath>
-      <Modified>2018-04-11T14:59:13.462</Modified>
+      <Modified>2018-04-11T16:21:31.502</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Calculator.xr.xml">
       <PackagePath>Calculator.xr.xml</PackagePath>
-      <Modified>2018-04-11T14:39:54.904</Modified>
+      <Modified>2018-04-11T15:43:42.565</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-11T14:59:14.926</Modified>
+      <Modified>2018-04-11T16:21:32.014</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\jamieosullivan\source\repos\Calculator\Calculator\bin\x86\Debug\Core\Calculator.exe">
       <PackagePath>Calculator.exe</PackagePath>
-      <Modified>2018-04-11T14:59:15.229</Modified>
+      <Modified>2018-04-11T16:21:32.376</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
