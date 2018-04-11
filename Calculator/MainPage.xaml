@@ -30,7 +30,11 @@
         <Button Click="btnPlus_Click" x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
 
 
-
+     private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            double answer = Convert.ToDouble(TextBox_Amount.Text) * Convert.ToDouble(TextBox_ExchangeRate.Text);
+            TextBox_Ans.Text = answer.ToString();
+        }
 
 
 
