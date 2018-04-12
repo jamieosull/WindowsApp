@@ -7,55 +7,63 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
-    <Grid Background="Green">
+
+    <Grid Background="LightBlue">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="316"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <TextBlock x:Name="tblStatus" Text="..." Margin="10,10,0,10" Grid.Row="0" />
 
         <StackPanel x:Name="spCoordinates" Grid.Row="1"
                     HorizontalAlignment="Left" VerticalAlignment="Center" 
-                    Margin="25, 0,0,0">
+                    Margin="25,343,0,341" Height="0" Width="0">
 
         </StackPanel>
-        
-        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top" Height="32" Width="87"/>
         <TextBox
             IsReadOnly="True"
-            x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <Button Click="btn7_Click" x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn8_Click" x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn9_Click" x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnDiv_Click" x:Name="btnDiv" Content="/" HorizontalAlignment="Left" Margin="219,115,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn4_Click" x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn5_Click" x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="125,152,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn6_Click" x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="172,152,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnTimes_Click" x:Name="btnTimes" Content="x" HorizontalAlignment="Left" Margin="219,152,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn1_Click" x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="78,189,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn2_Click" x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="125,189,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn3_Click" x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="172,189,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnMinus_Click" x:Name="btnMinus" Content="-" HorizontalAlignment="Left" Margin="219,189,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnEquals_Click" x:Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="78,226,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btn0_Click" x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="125,226,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnClear_Click" x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42"/>
-        <Button Click="btnPlus_Click" x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42"/>
+            x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Height="32"/>
+        <Button Click="btn7_Click" x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn8_Click" x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn9_Click" x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnDiv_Click" x:Name="btnDiv" Content="/" HorizontalAlignment="Left" Margin="219,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn4_Click" x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="78,152,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn5_Click" x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="125,152,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn6_Click" x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="172,152,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnTimes_Click" x:Name="btnTimes" Content="x" HorizontalAlignment="Left" Margin="219,152,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn1_Click" x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="78,189,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn2_Click" x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="125,189,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn3_Click" x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="172,189,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnMinus_Click" x:Name="btnMinus" Content="-" HorizontalAlignment="Left" Margin="219,189,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnEquals_Click" x:Name="btnEqual" Content="=" HorizontalAlignment="Left" Margin="78,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btn0_Click" x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="125,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnClear_Click" x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+        <Button Click="btnPlus_Click" x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
 
 
         
-        <TextBox x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="" VerticalAlignment="Top"/>
-            <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-        
-            <TextBox x:Name="TextBox_Amount" HorizontalAlignment="Left" Margin="465,203,0,0" Text="" VerticalAlignment="Top"/>
-            <TextBlock  HorizontalAlignment="Left" Text="Amount in £" Margin="340,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  RenderTransformOrigin="0.521,0.75"/>
-        
-            <TextBlock x:Name="TextBox_Ans" HorizontalAlignment="Left" Text="Amount in $" Margin="340,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
-            <TextBox HorizontalAlignment="Left" Margin="465,250,0,0" Text="" VerticalAlignment="Top"/>
-        
-            <Button  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top" Click="Button_Click_Conv"/>
+
+        <TextBox x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="" VerticalAlignment="Top" Height="32" Width="64"/>
+        <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="96" />
+
+        <TextBox x:Name="TextBox_Amount" HorizontalAlignment="Left" Margin="465,203,0,0" Text="" VerticalAlignment="Top" Height="32" Width="64"/>
+        <TextBlock  HorizontalAlignment="Left" Text="Amt:" Margin="340,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  RenderTransformOrigin="0.521,0.75" Height="20" Width="53"/>
+
+        <TextBlock x:Name="TextBox_Ans" HorizontalAlignment="Left" Text="Total" Margin="340,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="52" />
+        <TextBox HorizontalAlignment="Left" Margin="465,250,0,0" Text="" VerticalAlignment="Top" Height="32" Width="64"/>
+
+        <Button  Content="Calculate" HorizontalAlignment="Left" Margin="549,252,0,0" VerticalAlignment="Top" Click="Button_Click_Conv" Height="33" Width="82"/>
+        <ScrollViewer HorizontalAlignment="Left" Margin="488,89,0,0" VerticalAlignment="Top" Height="16" Width="16"/>
 
 
+
+
+
+
+
+        <WebView x:Name="webView1"  Source="https://www.xe.com/currencyconverter/" HorizontalAlignment="Left" Margin="643,26,0,0" VerticalAlignment="Top" Height="382" Width="791" Grid.RowSpan="2" RenderTransformOrigin="0.551,0.516" />
 
     </Grid>
 
@@ -70,5 +78,5 @@
 
 
 
-  
+
 </Page>

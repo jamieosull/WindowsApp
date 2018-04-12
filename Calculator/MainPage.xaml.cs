@@ -1,18 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Devices.Geolocation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -24,6 +15,8 @@ namespace Calculator
     public sealed partial class MainPage : Page
     {
         Geolocator _myGeo;
+
+   
         public MainPage()
         {
             this.InitializeComponent();
@@ -31,6 +24,110 @@ namespace Calculator
 
             result.Text = 0.ToString();
         }
+
+
+        private async void setupGeoLecationNow()
+        {
+            // ask permission to access GPS data
+            var accessStatus = await Geolocator.RequestAccessAsync();
+
+            switch (accessStatus)
+            {
+                case GeolocationAccessStatus.Unspecified:
+                    tblStatus.Text = "Unspecified Error";
+                    break;
+                case GeolocationAccessStatus.Allowed:
+                    tblStatus.Text = "Initialising Location Data";
+                    // now set up the events,
+                    _myGeo = new Geolocator();
+                    // set up the intervals
+                    _myGeo.DesiredAccuracy = PositionAccuracy.High;
+                    _myGeo.DesiredAccuracyInMeters = 1;
+
+                    // time in milliseconds - report
+                    _myGeo.ReportInterval = 600000;
+
+
+                    // events - run on the GPS thread, not the UI
+                    // so update the ui using lambda events
+                    _myGeo.StatusChanged += _myGeo_StatusChanged;
+
+                    _myGeo.PositionChanged += _myGeo_PositionChanged;
+
+                    // get the location now
+                    // return GeoCoordinate
+
+                    Geoposition pos = await _myGeo.GetGeopositionAsync();
+                    updateUILocation(pos);
+
+
+                    break;
+                case GeolocationAccessStatus.Denied:
+                    tblStatus.Text = "Access Denied :-(";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void updateUILocation(Geoposition pos)
+        {
+            TextBlock tblPosition;
+            tblPosition = new TextBlock();
+            tblPosition.TextWrapping = TextWrapping.Wrap;
+            tblPosition.Name = "tblPosition";
+            tblPosition.Text = "Latitude: " +
+                pos.Coordinate.Point.Position.Latitude.ToString() +
+                Environment.NewLine
+                + "Longitude: " +
+                pos.Coordinate.Point.Position.Longitude.ToString();
+
+            spCoordinates.Children.Add(tblPosition);
+
+
+
+        }
+
+        private void _myGeo_PositionChanged(Geolocator sender, PositionChangedEventArgs args)
+        {
+            // do some interesting stuff here.
+
+        }
+
+        private async void _myGeo_StatusChanged(Geolocator sender,
+            StatusChangedEventArgs args)
+        {
+            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
+                () =>
+                {
+                    updateUIStatus(args);
+                });
+        }
+
+        private void updateUIStatus(StatusChangedEventArgs args)
+        {
+            switch (args.Status)
+            {
+                case PositionStatus.Ready:
+                    tblStatus.Text = "Ready";
+                    break;
+                case PositionStatus.Initializing:
+                    tblStatus.Text = "Initialising";
+                    break;
+                case PositionStatus.Disabled:
+                    tblStatus.Text = "GPS Disabled - please fix";
+                    break;
+                case PositionStatus.NoData:
+                case PositionStatus.NotInitialized:
+                case PositionStatus.NotAvailable:
+                default:
+                    tblStatus.Text = "GPS Data not available";
+                    break;
+            }
+        }
+
+
+
 
         private void AddNumberToResult(double number)
         {
@@ -60,7 +157,7 @@ namespace Calculator
 
             if (!char.IsNumber(result.Text.Last()))
             {
-                result.Text = result.Text.Substring(0, result.Text.Length -1);
+                result.Text = result.Text.Substring(0, result.Text.Length - 1);
             }
 
             switch (operation)
@@ -71,9 +168,6 @@ namespace Calculator
                 case Operation.TIMES: result.Text += "*"; break;
             }
         }
-
-
-        
 
         private void btn7_Click(object sender, RoutedEventArgs e)
         {
@@ -134,7 +228,7 @@ namespace Calculator
 
         }
 
-       private void btnMinus_Click(object sender, RoutedEventArgs e)
+        private void btnMinus_Click(object sender, RoutedEventArgs e)
         {
             AddOperationToResult(Operation.MINUS);
 
@@ -270,119 +364,15 @@ namespace Calculator
             AddOperationToResult(Operation.PLUS);
 
         }
-        
-      //   private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-          //  double answer = Convert.ToDouble(TextBox_Amount.Text) * Convert.ToDouble(TextBox_ExchangeRate.Text);
-            //TextBox_Ans.Text = answer.ToString();
-        //}
-
-     
-
         private void Button_Click_Conv(object sender, RoutedEventArgs e)
         {
             double ans = Convert.ToDouble(TextBox_Amount.Text) * Convert.ToDouble(TextBox_ExchangeRate.Text);
             TextBox_Ans.Text = ans.ToString();
         }
-        private async void setupGeoLecationNow()
-        {
-            // ask permission to access GPS data
-            var accessStatus = await Geolocator.RequestAccessAsync();
-
-            switch (accessStatus)
-            {
-                case GeolocationAccessStatus.Unspecified:
-                    tblStatus.Text = "Unspecified Error";
-                    break;
-                case GeolocationAccessStatus.Allowed:
-                    tblStatus.Text = "Initialising Location Data";
-                    // now set up the events,
-                    _myGeo = new Geolocator();
-                    // set up the intervals
-                    _myGeo.DesiredAccuracy = PositionAccuracy.High;
-                    _myGeo.DesiredAccuracyInMeters = 1;
-
-                    // time in milliseconds - report
-                    _myGeo.ReportInterval = 600000;
-
-
-                    // events - run on the GPS thread, not the UI
-                    // so update the ui using lambda events
-                    _myGeo.StatusChanged += _myGeo_StatusChanged;
-
-                    _myGeo.PositionChanged += _myGeo_PositionChanged;
-
-                    // get the location now
-                    // return GeoCoordinate
-
-                    Geoposition pos = await _myGeo.GetGeopositionAsync();
-                    updateUILocation(pos);
-
-
-                    break;
-                case GeolocationAccessStatus.Denied:
-                    tblStatus.Text = "Access Denied :-(";
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void updateUILocation(Geoposition pos)
-        {
-            TextBlock tblPosition;
-            tblPosition = new TextBlock();
-            tblPosition.TextWrapping = TextWrapping.Wrap;
-            tblPosition.Name = "tblPosition";
-            tblPosition.Text = "Latitude: " +
-                pos.Coordinate.Point.Position.Latitude.ToString() +
-                Environment.NewLine
-                + "Longitude: " +
-                pos.Coordinate.Point.Position.Longitude.ToString();
-
-            spCoordinates.Children.Add(tblPosition);
-
-
-
-        }
-
-        private void _myGeo_PositionChanged(Geolocator sender, PositionChangedEventArgs args)
-        {
-            // do some interesting stuff here.
-
-        }
-
-        private async void _myGeo_StatusChanged(Geolocator sender,
-            StatusChangedEventArgs args)
-        {
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal,
-                () =>
-                {
-                    updateUIStatus(args);
-                });
-        }
-
-        private void updateUIStatus(StatusChangedEventArgs args)
-        {
-            switch (args.Status)
-            {
-                case PositionStatus.Ready:
-                    tblStatus.Text = "Ready";
-                    break;
-                case PositionStatus.Initializing:
-                    tblStatus.Text = "Initialising";
-                    break;
-                case PositionStatus.Disabled:
-                    tblStatus.Text = "GPS Disabled - please fix";
-                    break;
-                case PositionStatus.NoData:
-                case PositionStatus.NotInitialized:
-                case PositionStatus.NotAvailable:
-                default:
-                    tblStatus.Text = "GPS Data not available";
-                    break;
-            }
-        }
+       
 
     }
+
+
+
 }
