@@ -9,23 +9,30 @@
 
 
     <Grid Background="LightBlue">
+
+       
+        
+     
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="316"/>
+            <RowDefinition Height="Auto" MinHeight="320.8"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <TextBlock x:ConnectionId='1' x:Name="tblStatus" Text="..." Margin="10,10,0,10" Grid.Row="0" />
+        <TextBlock x:ConnectionId='1' x:Name="tblStatus" Text="..." Margin="10,10,0,9.8" Grid.Row="0" />
 
         <StackPanel x:ConnectionId='2' x:Name="spCoordinates" Grid.Row="1"
                     HorizontalAlignment="Left" VerticalAlignment="Center" 
-                    Margin="25,343,0,341" Height="0" Width="0">
+                    Margin="25,340.2,0,339" Height="0" Width="0">
 
         </StackPanel>
 
-        <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top" Height="32" Width="87"/>
+       
+
+         <TextBox HorizontalAlignment="Left" Margin="120,50,0,0" TextWrapping="Wrap" Text="Calculator" VerticalAlignment="Top" Height="32" Width="87"/>
         <TextBox x:ConnectionId='3'
             IsReadOnly="True"
             x:Name="result" HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340" Height="32"/>
-        <Button x:ConnectionId='4'                    x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
+
+           <Button x:ConnectionId='4'                    x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="78,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
         <Button x:ConnectionId='5'                    x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="125,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
         <Button x:ConnectionId='6'                    x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="172,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
         <Button x:ConnectionId='7'                      x:Name="btnDiv" Content="/" HorizontalAlignment="Left" Margin="219,115,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
@@ -41,9 +48,6 @@
         <Button x:ConnectionId='17'                    x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="125,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
         <Button x:ConnectionId='18'                        x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="172,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
         <Button x:ConnectionId='19'                       x:Name="btnPlus" Content="+" HorizontalAlignment="Left" Margin="219,226,0,0" VerticalAlignment="Top" Width="42" Height="33"/>
-
-
-        
 
         <TextBox x:ConnectionId='20' x:Name="TextBox_ExchangeRate" HorizontalAlignment="Left" Margin="465,158,0,0" Text="" VerticalAlignment="Top" Height="32" Width="64"/>
         <TextBlock  HorizontalAlignment="Left" Text="Exchange Rate" Margin="340,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="96" />

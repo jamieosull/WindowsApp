@@ -25,7 +25,7 @@ namespace Calculator
             result.Text = 0.ToString();
         }
 
-
+        // location
         private async void setupGeoLecationNow()
         {
             // ask permission to access GPS data
@@ -128,7 +128,7 @@ namespace Calculator
 
 
 
-
+        // calculator
         private void AddNumberToResult(double number)
         {
             if (char.IsNumber(result.Text.Last()))
@@ -150,14 +150,14 @@ namespace Calculator
         }
 
 
-        enum Operation { MINUS = 1, PLUS = 2, DIV = 3, TIMES = 4, NUMBER = 5 }
+        enum Operation { MINUS= 1, PLUS =2, DIV =3, TIMES =4, NUMBER =5 }
         private void AddOperationToResult(Operation operation)
         {
             if (result.Text.Length == 1 && result.Text == "0") return;
 
             if (!char.IsNumber(result.Text.Last()))
             {
-                result.Text = result.Text.Substring(0, result.Text.Length - 1);
+                result.Text = result.Text.Substring(0, result.Text.Length -1);
             }
 
             switch (operation)
@@ -274,7 +274,7 @@ namespace Calculator
                         case '-': op = Operation.MINUS; break;
                         case '+': op = Operation.PLUS; break;
                         case '/': op = Operation.DIV; break;
-                        case 'x': op = Operation.TIMES; break;
+                        case '*': op = Operation.TIMES; break;
 
                     }
                     AddOperationToTree(ref tree, new Operand() { operation = op });
@@ -337,7 +337,7 @@ namespace Calculator
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
 
-            // 
+            // gate
             if (string.IsNullOrEmpty(result.Text)) return;
 
             Operand tree = BuildTreeOperand(); // from string in result.text
