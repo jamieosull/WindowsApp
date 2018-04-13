@@ -7,4 +7,4 @@ To operation text, I added an AddNumberToResult, AddOperationToResult. I then cr
 Then to get the desired result, I defined a tree structure. I then get the experssion from result.text and build a tree with it.
 Then the final step is to evaluate tree structure.
 
-In the Exchange rate, You enter the current exchange rate price of the currency, enter the anount you wish to convert and the answer to calcualted then. 
+In the Exchange rate, You enter the current exchange rate price of the currency(e.g USD/JPY = 106.50), enter the amount you wish to convert and the answer is calcualted then. 
